@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func pressed(){
         
-        text.text = "Hello World! "
+        text.text = "Hello World!  "
         
     }
 
