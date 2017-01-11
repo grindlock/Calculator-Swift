@@ -10,12 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var text:UILabel!
+    let defaultTxt = "0.0"
+    
+    @IBOutlet weak var screen:UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        screen.text = defaultTxt
+        //var txt = add()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,12 +26,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pressed(){
+    /*@IBAction func add ( btn: UIButton)->Int{
         
-        text.text = "Hello World!  "
-        
-    }
+        switch(btn.tag){
+        case 1: return 1
+        case 2: return 2
+        case 3: return 3
+            
+        default: return 0
+        }
+        return 0
+    }*/
 
+    @IBAction func equalBtnPressed(_ sender: UIButton) {
+    }
 
 }
 
