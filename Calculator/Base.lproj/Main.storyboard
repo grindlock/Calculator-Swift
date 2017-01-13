@@ -70,6 +70,9 @@
                                                         <state key="normal" title="AC" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LNk-pw-ics"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-Mb-hXm">
                                                         <rect key="frame" x="86" y="0.0" width="83" height="96"/>
@@ -81,6 +84,9 @@
                                                         <state key="normal" title="+/-" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="changeSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsN-xE-AEk"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQF-u2-YWh">
                                                         <rect key="frame" x="172" y="0.0" width="83" height="96"/>
@@ -92,6 +98,9 @@
                                                         <state key="normal" title="%" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="percentPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScU-lj-C75"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-5p-wyk">
                                                         <rect key="frame" x="258" y="0.0" width="83" height="96"/>
@@ -103,6 +112,9 @@
                                                         <state key="normal" title="÷" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="divisionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6t-Df-VTM"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -161,6 +173,9 @@
                                                         <state key="normal" title="X" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="multiplicationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oW-qa-t9Z"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -219,6 +234,9 @@
                                                         <state key="normal" title="-" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="subtractionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HV-AR-FpN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -277,6 +295,9 @@
                                                         <state key="normal" title="+" backgroundImage="ButtonOper">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="additionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzv-H0-j9T"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -297,7 +318,7 @@
                                                             <action selector="numBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5l-rp-Qxs"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXO-I4-ixk">
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXO-I4-ixk">
                                                         <rect key="frame" x="171" y="0.0" width="84" height="96"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="504-ii-KL7"/>
@@ -322,7 +343,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="equalBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFm-7A-u7r"/>
+                                                            <action selector="equalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="371-6z-C8k"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
