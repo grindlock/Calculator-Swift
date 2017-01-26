@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     // Here I made an infere type constant
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var screenBackground: UIView!
     @IBOutlet weak var screen:UILabel!
+    
+    var audioPlayer: AVAudioPlayer!
+    let numbers = "keyboard_key"
+    let operations = "keyboard_tap"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +46,8 @@ class ViewController: UIViewController {
         screenBackground.layer.cornerRadius = cRadius
         
         screen.text = defaultTxt
+        
+        
         
         print("go",operSelected)
     }
@@ -58,6 +65,7 @@ class ViewController: UIViewController {
             }
             screen.text = grabTxt
         }
+         playSound(sound: numbers)
     }
     
     
@@ -65,6 +73,7 @@ class ViewController: UIViewController {
         grabTxt = ""
         operSelected = Oper.Empty
         screen.text = defaultTxt
+         playSound(sound: operations)
     }
     
     @IBAction func changeSignPressed(_ sender: AnyObject) {
@@ -73,6 +82,7 @@ class ViewController: UIViewController {
             grabTxt = "\(n)"
             screen.text = grabTxt
         }
+         playSound(sound: operations)
     }
     
     @IBAction func percentPressed(_ sender: AnyObject) {
@@ -81,24 +91,30 @@ class ViewController: UIViewController {
             grabTxt = "\(n)"
             screen.text = grabTxt
         }
+        playSound(sound: operations)
     }
 
     @IBAction func divisionPressed(_ sender: AnyObject) {
         doOperations(operation: .Division)
+         playSound(sound: operations)
     }
     
     @IBAction func multiplicationPressed(_ sender: AnyObject) {
         doOperations(operation: .Multiplication)
+         playSound(sound: operations)
     }
    
     @IBAction func subtractionPressed(_ sender: AnyObject) {
         doOperations(operation: .Subtraction)
+         playSound(sound: operations)
     }
     @IBAction func additionPressed(_ sender: AnyObject) {
         doOperations(operation: .Addition)
+         playSound(sound: operations)
     }
     @IBAction func equalPressed(_ sender: AnyObject) {
         doOperations(operation: operSelected)
+         playSound(sound: operations)
     }
     
     func doOperations(operation: Oper){
@@ -124,6 +140,29 @@ class ViewController: UIViewController {
             grabTxt = ""
             operSelected = operation
         }
+    }
+    
+    //Play sounds when butons are click
+    func playSound(sound:String){
+        
+        let soundPath = Bundle.main.path(forResource: sound, ofType:"mp3")
+        
+        let path = URL(fileURLWithPath: soundPath!)
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOf: path)
+            audioPlayer.prepareToPlay()
+        }catch let err as NSError{
+            print(err.debugDescription)
+        }
+        
+        if !audioPlayer.isPlaying{
+            audioPlayer.play()
+        }else{
+            audioPlayer.stop()
+            audioPlayer.play()
+        }
+        
     }
 }
 

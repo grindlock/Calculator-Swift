@@ -14,6 +14,8 @@
 		49005E361E20795800D38B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49005E341E20795800D38B17 /* LaunchScreen.storyboard */; };
 		49005E411E20795900D38B17 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49005E401E20795900D38B17 /* CalculatorTests.swift */; };
 		49005E4C1E20795900D38B17 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49005E4B1E20795900D38B17 /* CalculatorUITests.swift */; };
+		49F602211E3A978400A6D6C3 /* keyboard_key.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49F6021F1E3A978400A6D6C3 /* keyboard_key.mp3 */; };
+		49F602221E3A978400A6D6C3 /* keyboard_tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49F602201E3A978400A6D6C3 /* keyboard_tap.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		49005E471E20795900D38B17 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49005E4B1E20795900D38B17 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		49005E4D1E20795900D38B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F6021F1E3A978400A6D6C3 /* keyboard_key.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = keyboard_key.mp3; path = ../../../../Downloads/keyboard_key.mp3; sourceTree = "<group>"; };
+		49F602201E3A978400A6D6C3 /* keyboard_tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = keyboard_tap.mp3; path = ../../../../Downloads/keyboard_tap.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				49005E2A1E20795800D38B17 /* Calculator */,
+				49F602231E3A979600A6D6C3 /* Sounds */,
 				49005E3F1E20795900D38B17 /* CalculatorTests */,
 				49005E4A1E20795900D38B17 /* CalculatorUITests */,
 				49005E291E20795800D38B17 /* Products */,
@@ -103,6 +108,8 @@
 				49005E321E20795800D38B17 /* Assets.xcassets */,
 				49005E341E20795800D38B17 /* LaunchScreen.storyboard */,
 				49005E371E20795800D38B17 /* Info.plist */,
+				49F6021F1E3A978400A6D6C3 /* keyboard_key.mp3 */,
+				49F602201E3A978400A6D6C3 /* keyboard_tap.mp3 */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -123,6 +130,13 @@
 				49005E4D1E20795900D38B17 /* Info.plist */,
 			);
 			path = CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		49F602231E3A979600A6D6C3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					49005E271E20795800D38B17 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z6YN7RJW4G;
 						ProvisioningStyle = Automatic;
 					};
 					49005E3B1E20795900D38B17 = {
@@ -232,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F602221E3A978400A6D6C3 /* keyboard_tap.mp3 in Resources */,
 				49005E361E20795800D38B17 /* LaunchScreen.storyboard in Resources */,
 				49005E331E20795800D38B17 /* Assets.xcassets in Resources */,
 				49005E311E20795800D38B17 /* Main.storyboard in Resources */,
+				49F602211E3A978400A6D6C3 /* keyboard_key.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,11 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z6YN7RJW4G;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serge.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -422,11 +442,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z6YN7RJW4G;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serge.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -503,6 +526,7 @@
 				49005E521E20795900D38B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49005E531E20795900D38B17 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +535,7 @@
 				49005E551E20795900D38B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49005E561E20795900D38B17 /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +544,7 @@
 				49005E581E20795900D38B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
