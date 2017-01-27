@@ -51,6 +51,11 @@ class ViewController: UIViewController {
         
         print("go",operSelected)
     }
+    
+    //This function will change the status bar color once the screen has loaded
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBAction func numBtnPressed(sender: UIButton){
         

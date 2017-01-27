@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -365,6 +364,7 @@
                             <constraint firstAttribute="trailing" secondItem="cSS-3e-mfe" secondAttribute="trailing" id="vVe-0l-kn3"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="screen" destination="i54-Y0-22g" id="5C7-AD-3GS"/>
                         <outlet property="screenBackground" destination="vQI-Or-NH9" id="Vkm-Od-XiD"/>
